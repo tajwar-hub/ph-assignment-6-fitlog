@@ -2,7 +2,7 @@ import ExerciseCard from "@/components/shared/ExerciseCard";
 import { Exercise } from "@/types/DataTypes";
 
 
- const getExercises = async(): Promise<Exercise[]> => {
+const getExercises = async (): Promise<Exercise[]> => {
     const res = await fetch("https://api.api-store.workers.dev/api/fitlog");
 
     if (!res.ok) {
@@ -26,7 +26,7 @@ const ExerciseLibrary = async () => {
             </p>
 
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {exercises.slice(0,9).map((exercise) => (
+                {exercises.map((exercise) => (
                     <ExerciseCard key={exercise.id} exercise={exercise} />
                 ))}
             </div>

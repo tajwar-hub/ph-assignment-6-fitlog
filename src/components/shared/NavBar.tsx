@@ -16,7 +16,7 @@ export default function NavBar() {
       </Link>
 
       <div className="flex gap-8">
-        <Link href="/" className="">
+        <Link href="/exercise" className="">
           Workouts
         </Link>
         <Link href="/my-plan" className="">
