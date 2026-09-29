@@ -16,20 +16,18 @@ interface ExerciseCardProps {
     return (
         <Link
             href={`/exercise/${id}`}
-            className="group block overflow-hidden rounded-xl border border-gray-800 bg-[#11141a] transition hover:-translate-y-1 hover:border-[#ccff00]/50"
+            className="group block overflow-hidden rounded-xl border border-gray-800 bg-[#11141a] transition hover:-translate-y-1"
         >
-            <div className="relative h-48 w-full overflow-hidden">
+            <div className="relative h-52 overflow-hidden">
                 <Image
                     src={image}
                     alt={name}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition duration-300 group-hover:scale-105"
+                    fill                   
                 />
             </div>
 
             <div className="p-4">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex gap-2">
                     {muscleGroups.map((group) => (
                         <span
                             key={group}
