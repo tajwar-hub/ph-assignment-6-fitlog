@@ -4,8 +4,8 @@ import ExerciseLibrary from '@/components/home/ExerciseLibrary';
 const page = () => {
   return (
     <div>
-     <Banner/>
-     <ExerciseLibrary/>
+      <Banner />
+      <ExerciseLibrary />
     </div>
   );
 };

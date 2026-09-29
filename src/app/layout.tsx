@@ -33,9 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <NavBar />
           {children}
           <Footer />
-
           <ToastContainer position="bottom-right" theme="dark" />
-
         </PlanProvider>
       </body>
     </html>
