@@ -13,3 +13,12 @@ export interface Exercise {
     description: string;
     instructions: string[];
 }
+
+export interface PlanItem extends Exercise {
+  isDone: boolean; 
+}
+
+
+export type SortOption = "Duration" | "Calories" | "Rating";
+
+export type PlanTab = "plan" | "saved";

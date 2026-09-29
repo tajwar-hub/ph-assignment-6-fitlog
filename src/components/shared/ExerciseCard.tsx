@@ -11,8 +11,7 @@ interface ExerciseCardProps {
 
  const ExerciseCard = ({ exercise }: ExerciseCardProps) => {
 
-    const { id, name, image, muscleGroups, equipment, duration, caloriesBurned, rating } =
-        exercise;
+    const { id, name, image, muscleGroups, equipment, duration, caloriesBurned, rating } = exercise;
 
     return (
         <Link

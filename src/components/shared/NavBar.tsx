@@ -1,9 +1,19 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
+import { usePathname } from "next/navigation";
+import { usePlan } from "@/context/PlanContext";
 
 export default function NavBar() {
- 
+
+
+  const pathname = usePathname();
+  const { plan, saved } = usePlan();
+
+  const linkClass = (path: string) => pathname === path ? "text-lime-400 font-semibold" : "text-gray-300 hover:text-white";
+
 
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-[#0d0f12] border-b border-gray-800">
@@ -16,10 +26,10 @@ export default function NavBar() {
       </Link>
 
       <div className="flex gap-8">
-        <Link href="/exercise" className="">
+        <Link href="/" className={linkClass("/")}>
           Workouts
         </Link>
-        <Link href="/my-plan" className="">
+        <Link href="/my-plan" className={linkClass("/my-plan")}>
           My Plan
         </Link>
       </div>
@@ -32,7 +42,7 @@ export default function NavBar() {
           Plan
 
           <span className="bg-lime-400 text-black font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs">
-            {0}
+            {plan.length}
           </span>
         </Link>
 
@@ -43,7 +53,7 @@ export default function NavBar() {
           Saved
 
           <span className="border border-gray-500 rounded-full w-6 h-6 flex items-center justify-center text-xs">
-            {0}
+            {saved.length}
           </span>
         </Link>
       </div>
