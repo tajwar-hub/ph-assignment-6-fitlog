@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Exercise } from "@/types/DataTypes";
 import { CiSaveUp2 } from "react-icons/ci";
 import { MdAddToPhotos } from "react-icons/md";
+import SaveForLaterButton from "@/components/buttons/SaveForLaterButton";
+import AddToPlanButton from "@/components/buttons/AddToPlanButton";
 
 
 
@@ -95,8 +97,8 @@ const ExerciseDetailsPage = async ({ params }: DetailsPageProps) => {
                 </ol>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                    <button className="btn btn-outline btn-success"> <MdAddToPhotos /> {`Add to today's plan`}</button>
-                    <button className="btn btn-outline"> <CiSaveUp2 /> Save for later</button>
+                    <AddToPlanButton exercise={exercise} />
+                    <SaveForLaterButton exercise={exercise} />
                 </div>
             </div>
         </section>
