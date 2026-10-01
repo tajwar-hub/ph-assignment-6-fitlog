@@ -16,10 +16,12 @@ const RemoveButton = ({ id, from }: RemoveButtonProps) => {
   function handleClick() {
     if (from === "plan") {
       removeFromPlan(id);
+      toast.info("Removed From My Plan");
     } else {
       removeFromSaved(id);
+      toast.info("Removed From Saved");
     }
-    toast.info("Removed.");
+    
   }
 
   return (
