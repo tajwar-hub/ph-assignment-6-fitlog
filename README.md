@@ -5,7 +5,6 @@ twelve lifts, build today's workout plan, save exercises for later, and
 track your session's total minutes and calories — all in one clean,
 distraction-free interface.
 
-> Train with intent. Log every set.
 
 ---
 
@@ -56,5 +55,3 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
-
-## 📁 Project Structure
