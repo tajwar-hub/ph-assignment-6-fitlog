@@ -5,10 +5,10 @@ import SaveForLaterButton from "@/components/buttons/SaveForLaterButton";
 import AddToPlanButton from "@/components/buttons/AddToPlanButton";
 
 const getExercise = async (id: string): Promise<Exercise | null> => {
-    const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`);
+    const res = await fetch(`${process.env.API_URL}/${id}`);
 
     if (!res.ok) {
-        return null;
+        throw new Error("Failed to fetch exercises")
     }
     return res.json();
 }

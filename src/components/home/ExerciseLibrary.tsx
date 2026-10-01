@@ -3,7 +3,7 @@ import { Exercise } from "@/types/DataTypes";
 
 
  const getExercises = async(): Promise<Exercise[]> => {
-    const res = await fetch("https://api.api-store.workers.dev/api/fitlog");
+    const res = await fetch(process.env.API_URL!);
 
     if (!res.ok) {
         throw new Error("Failed to fetch exercises");
